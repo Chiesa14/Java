@@ -8,6 +8,8 @@ public class App {
         String string = "2005-02-12";
         LocalDate dob = LocalDate.parse(string, DateTimeFormatter.ISO_DATE);
         Person peter = new Person(12,"Mugisha","Davis",dob);
-        System.out.println(peter);
+        
+        Person p1 = new Employee();
+        p1.
     }
 }
