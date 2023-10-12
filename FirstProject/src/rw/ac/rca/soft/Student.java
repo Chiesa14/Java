@@ -2,12 +2,21 @@ package rw.ac.rca.soft;
 
 import rw.ac.rca.mis.Person;
 
+import java.time.LocalDate;
+
 public class Student extends Person {
     private String grade;
     private String school;
     private String combination;
 
     //generate getters and setters
+
+    public Student(int age, String firstName, String lastName, LocalDate dob, String grade, String school, String combination) {
+        super(age, firstName, lastName, dob);
+        this.grade = grade;
+        this.school = school;
+        this.combination = combination;
+    }
 
     public String getGrade() {
         return grade;

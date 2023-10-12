@@ -17,13 +17,15 @@ public class Person {
         this.firstName=firstName;
         this.lastName=lastName;
     }
-    public Person() {}
 
     public Person(int age, String firstName, String lastName, LocalDate dob) {
         this.age = age;
         this.firstName = firstName;
         this.lastName = lastName;
         this.dob = dob;
+    }
+    public Person(){
+        System.out.println("I am a person");
     }
     public int getAge() {
         return age;
@@ -49,6 +51,14 @@ public class Person {
     public void setDob(LocalDate dob) {
         this.dob = dob;
     }
+
+    public void  myProfile(){
+        System.out.println("I am "+ this.firstName);
+    }
+    public  void myProfile(String title){
+        System.out.println("I am "+title+this.firstName+" "+this.lastName);
+    }
+
     public String toString() {
         int years=LocalDate.now().getYear()-this.dob.getYear();
         return this.firstName+" "

@@ -32,8 +32,10 @@ public class App {
         System.out.println(p2.getPosition());
         System.out.println(p2.getInstitution());
 
-        Person emp = new Employee("RCA" , "teacher" , 20000 , "Lorie" , "Angela" , 45 ,dob);
+        Person emp = new Employee("RCA" , "student" , 20000 , "Chiesa" , "Uwimana" , 20 ,dob);
         System.out.println(emp.toString());
+        emp.myProfile();
+        emp.myProfile("Mr.");
 
     }
 

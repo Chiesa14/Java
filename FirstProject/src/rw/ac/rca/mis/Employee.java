@@ -8,21 +8,28 @@ public class Employee  extends Person{
     private long salary;
 
     //default constructor is needed bcz without it the app will run with errors
-    public Employee() {
 
-    };
+ public Employee(String inst , String pos , long money , String firstname , String lastname , int ageEmployee , LocalDate dobEmployee ) {
+     super(ageEmployee,firstname,lastname,dobEmployee);
+     this.institution = inst;
+     this.position = pos;
+     this.salary = money;
+ }
 
+ public  Employee(){
+     super();
+     System.out.println("I am an Employee");
+ }
     //Parameterized constructor
-
-    public Employee(String inst , String pos , long money , String firstname , String lastname , int ageEmployee , LocalDate dobEmployee ) {
-        this.institution = inst;
-        this.position = pos;
-        this.salary = money;
-        this.firstName = firstname;
-        this.lastName = lastname;
-        this.age = ageEmployee;
-        this.dob = dobEmployee;
-    }
+// public Employee(String inst , String pos , long money , String firstname , String lastname , int ageEmployee , LocalDate dobEmployee ) {
+//     this.institution = inst;
+//     this.position = pos;
+//     this.salary = money;
+//     this.firstName = firstname;
+//     this.lastName = lastname;
+//     this.age = ageEmployee;
+//     this.dob = dobEmployee;
+// }
 
     /**
      * @return the institution
@@ -59,6 +66,14 @@ public class Employee  extends Person{
      */
     public void setSalary(long salary) {
         this.salary = salary;
+    }
+
+    public  void myProfile(){
+        super.myProfile();
+        System.out.println("A "+this.position+" in " +this.institution);
+    }
+    public void  myProfile(String title){
+
     }
     @Override
     public String toString() {
