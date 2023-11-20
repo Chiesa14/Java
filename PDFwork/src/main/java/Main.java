@@ -52,7 +52,6 @@ public class Main {
                 String districtName = scanner.next();
                 String provinceCode = String.valueOf(scanner.nextInt());
                 String provinceName = scanner.next();
-                System.out.println("District Code: " + districtCode + ", province Code: " + provinceCode + ", Province Name: " + provinceName + ", District Name: " + districtName);
                 addRows(table, districtCode, districtName, provinceCode, provinceName);
             }
             document.add(table);
