@@ -1,22 +1,16 @@
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        MyPoint<Integer,Integer> p = new MyPoint<Integer,Integer>(12,15);
-        System.out.println(p);
-        MyPoint<Double,Double> d = new MyPoint<Double,Double>(12.5,15.8);
-        System.out.println(d);
-        d.doSomething(new ArrayList<Double>(Arrays.asList(12.5,43.7,35.2,34.6,56.8)));
-        List<MyPoint>points = new ArrayList<MyPoint>();
-        points.add(new MyPoint<Double,Float>(12.3,12.0f));
-        points.add(new MyPoint<Float,Float>(12.6f,15.6f));
-        points.add(new MyPoint<Integer,Integer>(12,15));
-        points.add(d);
-
-        System.out.println(points);
+        Queue<Integer> sti = new LinkedList<Integer>();
+        sti.add(100);
+        sti.add(200);
+        sti.add(300);
+        sti.add(400);
+        System.out.println("Using Queue");
+        for (Integer i : sti) {
+            System.out.println(i);
+        }
+        System.out.println("THe ");
     }
 }
